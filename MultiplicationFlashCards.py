@@ -3,8 +3,12 @@ from datetime import datetime
 
 
 greeting_messages = ['Hi!']
-right_answer_messages = ['Freaking awesome!  You got it right, I knew you could do it!!!']
-wrong_answer_messages = ['Oops! Either you got the wrong answer, or Daddy didn\'t code this right! Let\'s try another one...']
+right_answer_messages = ['Freaking awesome!  You got it right, I knew you could do it!!!', 'Awesome-sauce!', 'You rock!!!',
+						'You are a multiplication GENIUS!!!', 'How did you get so smart?!?!']
+wrong_answer_messages = ['Oops! Either you got the wrong answer, or Daddy didn\'t code this right! Let\'s try another one...',
+						'Almost! Maybe try one of your math strategies next time you\'re having trouble?',
+						'Oops! I know you can figure that one out, maybe you typed the wrong number by accident?',
+						'Uh Oh! You missed that one, but I KNOW you can get the next one right!!']
 
 level1_base = [0, 1, 2, 5, 10]
 level2_base = [0, 1, 2, 4, 5, 10, 11]
@@ -21,6 +25,9 @@ else:
 	print("\nEither you're trying to trick me, OR you spelled you're name wrong!  I'm going to call you Maddie McStinkerButt for now!",
 		"anyway! :-)")
 	name = 'Maddie McStinkerButt'
+
+# def get_message(response):
+# 	if response == 'correct':
 
 
 keep_playing = 'y'
@@ -48,11 +55,11 @@ while keep_playing == str.lower('y'):
 			print(problem)
 			x = input('\n')
 			if int(x) == int(answer):
-				print(str(right_answer_messages) + '\n')
+				print(str(right_answer_messages[random.randint(0,(len(right_answer_messages)-1))]) + '\n')
 				right.append(i)
 				f.write('Problem ' + str(i) +': ' + problem + '\tCorrect answer is ' + str(answer) + '.  Your answer was '+ str(x) + '.  CORRECT\n')
 			else:
-				print(str(wrong_answer_messages) + '\n')
+				print(str(wrong_answer_messages[random.randint(0,(len(wrong_answer_messages)-1))]) + '\n')
 				wrong.append(i)
 				f.write('Problem ' + str(i) +': ' + problem + '\tCorrect answer is ' + str(answer) + '.  Your answer was '+ str(x) + '.  WRONG\n')
 
@@ -87,11 +94,11 @@ while keep_playing == str.lower('y'):
 			print(problem)
 			x = input('\n')
 			if int(x) == int(answer):
-				print(str(right_answer_messages) + '\n')
+				print(str(right_answer_messages[random.randint(0,(len(right_answer_messages)-1))]) + '\n')
 				right.append(i)
 				f.write('Problem ' + str(i) +': ' + problem + '\tCorrect answer is ' + str(answer) + '.  Your answer was '+ str(x) + '.  CORRECT\n')
 			else:
-				print(str(wrong_answer_messages) + '\n')
+				print(str(wrong_answer_messages[random.randint(0,(len(wrong_answer_messages)-1))]) + '\n')
 				wrong.append(i)
 				f.write('Problem ' + str(i) +': ' + problem + '\tCorrect answer is ' + str(answer) + '.  Your answer was '+ str(x) + '.  WRONG\n')
 
@@ -133,11 +140,11 @@ while keep_playing == str.lower('y'):
 			print(problem)
 			x = input('\n')
 			if int(x) == int(answer):
-				print(str(right_answer_messages) + '\n')
+				print(str(right_answer_messages[random.randint(0,(len(right_answer_messages)-1))]) + '\n')
 				right.append(i)
 				f.write('Problem ' + str(i) +': ' + problem + '\tCorrect answer is ' + str(answer) + '.  Your answer was '+ str(x) + '.  CORRECT\n')
 			else:
-				print(str(wrong_answer_messages) + '\n')
+				print(str(wrong_answer_messages[random.randint(0,(len(wrong_answer_messages)-1))]) + '\n')
 				wrong.append(i)
 				f.write('Problem ' + str(i) +': ' + problem + '\tCorrect answer is ' + str(answer) + '.  Your answer was '+ str(x) + '.  WRONG\n')
 
