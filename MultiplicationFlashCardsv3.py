@@ -24,7 +24,7 @@ def do_level(level, values, common, name):
 	print('10 problems coming your way, let\'s get started!!!\n\n')
 	start = datetime.now()
 	starttime = start.strftime('%Y-%m-%d, %H:%M:%S')
-	f.write('Level ' + str(level) + ' start time: ' + starttime + '\n')
+	f.write(f'Level {level} start time: {starttime}\n')
 	
 	for i in range(10):
 		num1 = random.choice(values)
@@ -42,19 +42,18 @@ def do_level(level, values, common, name):
 		if int(x) == int(answer):
 			print(str(random.choice(right_answer_messages)) + '\n')
 			right.append(i)
-			f.write('Problem ' + str(i) +': ' + problem + '\tCorrect answer is ' + str(answer) + '.  Your answer was '+ str(x) + '.  CORRECT\n')
+			f.write(f'Problem {i}: {problem} \tCorrect answer is {answer}.  Your answer was {x}.  CORRECT\n')
 		elif int(x) != int(answer):
 			print('\nOops, you missed it that time.  Let\'s try it one more time!')
 			x = input(problem)
 			if int(x) == int(answer):
 				print(str(random.choice(right_answer_messages)) + '\n')
 				right.append(i)
-				f.write('Problem ' + str(i) +': ' + problem + '\tCorrect answer is ' + str(answer) + '.  Your answer was '+ str(x) + '.  CORRECT (2nd try)\n')
+				f.write(f'Problem {i}: {problem} \tCorrect answer is {answer}.  Your answer was {x}.  CORRECT (2nd try)\n')
 			else:
 				print(str(random.choice(wrong_answer_messages)) + '\n')
 				wrong.append(i)
-				f.write('Problem ' + str(i) +': ' + problem + '\tCorrect answer is ' + str(answer) + '.  Your answer was '+ str(x) + '.  WRONG\n')
-
+				f.write(f'Problem {i}: {problem} \tCorrect answer is {answer}.  Your answer was {x}.  WRONG\n')
 
 		total.append(i)
 	end = datetime.now()
