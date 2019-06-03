@@ -33,7 +33,7 @@ level2_base = [0, 1, 2, 4, 5, 10, 11]
 level3_base = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 common_numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 
-print(f'level1_base {level1_base} level2_base {level2_base} level3_base{level3_base}')
+# print(f'level1_base {level1_base} level2_base {level2_base} level3_base{level3_base}')
 
 def play_correct_sound():
 	os.chdir(sound_path)
@@ -143,7 +143,7 @@ def do_level(level, values, common, name, problems=20):
 
 
 print('\n\n')
-name = 'matt' #input('Hello, thanks for wanting to play Daddy\'s super amazing multiplication game!!!\n\nPlease type your name:\t')
+name = input('Hello, thanks for wanting to play Daddy\'s super amazing multiplication game!!!\n\nPlease type your name:\t')
 if str.lower(name) == 'maddie':
 	pass
 else:
@@ -157,7 +157,7 @@ while keep_playing == str.lower('y'):
 	wrong = []
 	total = []
 	while True:
-		focus = 999 #input('What number would you like to practice on for this round?\t')
+		focus = input('What number would you like to practice on for this round?\t')
 		print(focus)
 		focus = int(focus)
 		print(f'focus after storing as int: {focus}')
